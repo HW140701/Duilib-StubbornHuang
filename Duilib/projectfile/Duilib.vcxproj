@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{fffa2e7c-f1d2-48f8-8d34-708c9ac05074}</ProjectGuid>
+    <RootNamespace>Duilib</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>..\.\bin\$(ProjectName)\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>..\.\intermediatefile\$(ProjectName)\$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>..\.\bin\$(ProjectName)\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>..\.\intermediatefile\$(ProjectName)\$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>..\.\bin\$(ProjectName)\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>..\.\intermediatefile\$(ProjectName)\$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>..\.\bin\$(ProjectName)\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>..\.\intermediatefile\$(ProjectName)\$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_WINDOWS;UILIB_EXPORTS;WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>..\.\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_WINDOWS;UILIB_EXPORTS;WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>..\.\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_WINDOWS;UILIB_EXPORTS;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>..\.\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_WINDOWS;UILIB_EXPORTS;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>..\.\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\Control\UIActiveX.cpp" />
+    <ClCompile Include="..\src\Control\UIButton.cpp" />
+    <ClCompile Include="..\src\Control\UICheckBox.cpp" />
+    <ClCompile Include="..\src\Control\UICombo.cpp" />
+    <ClCompile Include="..\src\Control\UIDateTime.cpp" />
+    <ClCompile Include="..\src\Control\UIEdit.cpp" />
+    <ClCompile Include="..\src\Control\UIFlash.cpp" />
+    <ClCompile Include="..\src\Control\UIGifAnim.cpp" />
+    <ClCompile Include="..\src\Control\UILabel.cpp" />
+    <ClCompile Include="..\src\Control\UIList.cpp" />
+    <ClCompile Include="..\src\Control\UIOption.cpp" />
+    <ClCompile Include="..\src\Control\UIProgress.cpp" />
+    <ClCompile Include="..\src\Control\UIRichEdit.cpp" />
+    <ClCompile Include="..\src\Control\UIScrollBar.cpp" />
+    <ClCompile Include="..\src\Control\UISlider.cpp" />
+    <ClCompile Include="..\src\Control\UIText.cpp" />
+    <ClCompile Include="..\src\Control\UITreeView.cpp" />
+    <ClCompile Include="..\src\Control\UIWebBrowser.cpp" />
+    <ClCompile Include="..\src\Core\UIBase.cpp" />
+    <ClCompile Include="..\src\Core\UIContainer.cpp" />
+    <ClCompile Include="..\src\Core\UIControl.cpp" />
+    <ClCompile Include="..\src\Core\UIDlgBuilder.cpp" />
+    <ClCompile Include="..\src\Core\UIManager.cpp" />
+    <ClCompile Include="..\src\Core\UIMarkup.cpp" />
+    <ClCompile Include="..\src\Core\UIRender.cpp" />
+    <ClCompile Include="..\src\Layout\UIChildLayout.cpp" />
+    <ClCompile Include="..\src\Layout\UIHorizontalLayout.cpp" />
+    <ClCompile Include="..\src\Layout\UITabLayout.cpp" />
+    <ClCompile Include="..\src\Layout\UITileLayout.cpp" />
+    <ClCompile Include="..\src\Layout\UIVerticalLayout.cpp" />
+    <ClCompile Include="..\src\StdAfx.cpp" />
+    <ClCompile Include="..\src\UIlib.cpp" />
+    <ClCompile Include="..\src\Utils\stb_image.c" />
+    <ClCompile Include="..\src\Utils\UIDelegate.cpp" />
+    <ClCompile Include="..\src\Utils\Utils.cpp" />
+    <ClCompile Include="..\src\Utils\WinImplBase.cpp" />
+    <ClCompile Include="..\src\Utils\WndShadow.cpp" />
+    <ClCompile Include="..\src\Utils\XUnzip.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\Control\UIActiveX.h" />
+    <ClInclude Include="..\src\Control\UIButton.h" />
+    <ClInclude Include="..\src\Control\UICheckBox.h" />
+    <ClInclude Include="..\src\Control\UICombo.h" />
+    <ClInclude Include="..\src\Control\UIDateTime.h" />
+    <ClInclude Include="..\src\Control\UIEdit.h" />
+    <ClInclude Include="..\src\Control\UIFlash.h" />
+    <ClInclude Include="..\src\Control\UIGifAnim.h" />
+    <ClInclude Include="..\src\Control\UILabel.h" />
+    <ClInclude Include="..\src\Control\UIList.h" />
+    <ClInclude Include="..\src\Control\UIOption.h" />
+    <ClInclude Include="..\src\Control\UIProgress.h" />
+    <ClInclude Include="..\src\Control\UIRichEdit.h" />
+    <ClInclude Include="..\src\Control\UIScrollBar.h" />
+    <ClInclude Include="..\src\Control\UISlider.h" />
+    <ClInclude Include="..\src\Control\UIText.h" />
+    <ClInclude Include="..\src\Control\UITreeView.h" />
+    <ClInclude Include="..\src\Control\UIWebBrowser.h" />
+    <ClInclude Include="..\src\Core\UIBase.h" />
+    <ClInclude Include="..\src\Core\UIContainer.h" />
+    <ClInclude Include="..\src\Core\UIControl.h" />
+    <ClInclude Include="..\src\Core\UIDefine.h" />
+    <ClInclude Include="..\src\Core\UIDlgBuilder.h" />
+    <ClInclude Include="..\src\Core\UIManager.h" />
+    <ClInclude Include="..\src\Core\UIMarkup.h" />
+    <ClInclude Include="..\src\Core\UIRender.h" />
+    <ClInclude Include="..\src\Layout\UIChildLayout.h" />
+    <ClInclude Include="..\src\Layout\UIHorizontalLayout.h" />
+    <ClInclude Include="..\src\Layout\UITabLayout.h" />
+    <ClInclude Include="..\src\Layout\UITileLayout.h" />
+    <ClInclude Include="..\src\Layout\UIVerticalLayout.h" />
+    <ClInclude Include="..\src\StdAfx.h" />
+    <ClInclude Include="..\src\UIlib.h" />
+    <ClInclude Include="..\src\Utils\downloadmgr.h" />
+    <ClInclude Include="..\src\Utils\FlashEventHandler.h" />
+    <ClInclude Include="..\src\Utils\stb_image.h" />
+    <ClInclude Include="..\src\Utils\UIDelegate.h" />
+    <ClInclude Include="..\src\Utils\Utils.h" />
+    <ClInclude Include="..\src\Utils\WebBrowserEventHandler.h" />
+    <ClInclude Include="..\src\Utils\WinImplBase.h" />
+    <ClInclude Include="..\src\Utils\WndShadow.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\src\Utils\flash11.tlh" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
