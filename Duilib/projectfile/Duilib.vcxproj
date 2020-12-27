@@ -155,6 +155,7 @@
     <ClCompile Include="..\src\Control\UIButton.cpp" />
     <ClCompile Include="..\src\Control\UICheckBox.cpp" />
     <ClCompile Include="..\src\Control\UICombo.cpp" />
+    <ClCompile Include="..\src\Control\UIComboEdit.cpp" />
     <ClCompile Include="..\src\Control\UIDateTime.cpp" />
     <ClCompile Include="..\src\Control\UIEdit.cpp" />
     <ClCompile Include="..\src\Control\UIFlash.cpp" />
@@ -195,6 +196,7 @@
     <ClInclude Include="..\src\Control\UIButton.h" />
     <ClInclude Include="..\src\Control\UICheckBox.h" />
     <ClInclude Include="..\src\Control\UICombo.h" />
+    <ClInclude Include="..\src\Control\UIComboEdit.h" />
     <ClInclude Include="..\src\Control\UIDateTime.h" />
     <ClInclude Include="..\src\Control\UIEdit.h" />
     <ClInclude Include="..\src\Control\UIFlash.h" />

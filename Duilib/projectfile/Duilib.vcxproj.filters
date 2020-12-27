@@ -125,6 +125,9 @@
     <ClCompile Include="..\src\Utils\XUnzip.cpp">
       <Filter>Utils</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\Control\UIComboEdit.cpp">
+      <Filter>Control</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\src\StdAfx.h" />
@@ -245,6 +248,9 @@
     </ClInclude>
     <ClInclude Include="..\src\Utils\WndShadow.h">
       <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Control\UIComboEdit.h">
+      <Filter>Control</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

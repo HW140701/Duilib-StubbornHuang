@@ -297,15 +297,14 @@ BOOL CTxtWinHost::Init(CRichEditUI *re, const CREATESTRUCT *pcs)
         return false;
     }
 
+    // edit controls created without a window are multiline by default
+    // so that paragraph formats can be
+    dwStyle = ES_MULTILINE;
 
-    //// edit controls created without a window are multiline by default
-    //// so that paragraph formats can be
-    //dwStyle = ES_MULTILINE;
+    // edit controls are rich by default
+    fRich = re->IsRich();
 
-    //// edit controls are rich by default
-    //fRich = re->IsRich();
-
-    //cchTextMost = re->GetLimitText();
+    cchTextMost = re->GetLimitText();
 
     if (pcs )
     {
@@ -351,7 +350,9 @@ BOOL CTxtWinHost::Init(CRichEditUI *re, const CREATESTRUCT *pcs)
 
     if(FAILED(hr))
     {
-        goto err;
+        //goto err;
+        // Modifed By HuangWang
+        return false;
     }
 
     // Set window text
@@ -367,16 +368,15 @@ BOOL CTxtWinHost::Init(CRichEditUI *re, const CREATESTRUCT *pcs)
         ::MultiByteToWideChar(CP_ACP, 0, pcs->lpszName, -1, (LPWSTR)lpText, iLen) ;
         if(FAILED(pserv->TxSetText((LPWSTR)lpText))) {
             delete[] lpText;
-            goto err;
+            //goto err;
+            // Modifed By HuangWang
+            return false;
         }
         delete[] lpText;
 #endif
     }
 
     return TRUE;
-
-err:
-    return FALSE;
 }
 
 /////////////////////////////////  IUnknown ////////////////////////////////

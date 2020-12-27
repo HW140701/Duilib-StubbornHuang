@@ -216,12 +216,12 @@ namespace DuiLib
 				goto Label_ForeImage;
 			}	
 		}
-		
+
 		//UINT uSavedState = m_uButtonState;
 		//m_uButtonState &= ~UISTATE_PUSHED;
 		//CButtonUI::PaintStatusImage(hDC);
 		//m_uButtonState = uSavedState;
-
+		
 		// Modifed By HuangWang
 		{
 			UINT uSavedState = m_uButtonState;

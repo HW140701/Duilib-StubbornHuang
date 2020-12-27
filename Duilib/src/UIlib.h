@@ -110,3 +110,4 @@
 #include "Control/UIWebBrowser.h"
 #include "Control/UIGifAnim.h"
 //#include "Control/UIFlash.h"
+#include "Control/UIComboEdit.h"
