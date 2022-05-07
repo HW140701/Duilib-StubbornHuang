@@ -162,6 +162,7 @@
     <ClCompile Include="..\src\Control\UIGifAnim.cpp" />
     <ClCompile Include="..\src\Control\UILabel.cpp" />
     <ClCompile Include="..\src\Control\UIList.cpp" />
+    <ClCompile Include="..\src\Control\UIMenu.cpp" />
     <ClCompile Include="..\src\Control\UIOption.cpp" />
     <ClCompile Include="..\src\Control\UIProgress.cpp" />
     <ClCompile Include="..\src\Control\UIRichEdit.cpp" />
@@ -203,6 +204,7 @@
     <ClInclude Include="..\src\Control\UIGifAnim.h" />
     <ClInclude Include="..\src\Control\UILabel.h" />
     <ClInclude Include="..\src\Control\UIList.h" />
+    <ClInclude Include="..\src\Control\UIMenu.h" />
     <ClInclude Include="..\src\Control\UIOption.h" />
     <ClInclude Include="..\src\Control\UIProgress.h" />
     <ClInclude Include="..\src\Control\UIRichEdit.h" />
@@ -228,6 +230,7 @@
     <ClInclude Include="..\src\UIlib.h" />
     <ClInclude Include="..\src\Utils\downloadmgr.h" />
     <ClInclude Include="..\src\Utils\FlashEventHandler.h" />
+    <ClInclude Include="..\src\Utils\observer_impl_base.h" />
     <ClInclude Include="..\src\Utils\stb_image.h" />
     <ClInclude Include="..\src\Utils\UIDelegate.h" />
     <ClInclude Include="..\src\Utils\Utils.h" />

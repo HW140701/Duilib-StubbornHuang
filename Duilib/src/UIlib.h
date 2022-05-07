@@ -111,3 +111,4 @@
 #include "Control/UIGifAnim.h"
 //#include "Control/UIFlash.h"
 #include "Control/UIComboEdit.h"
+#include "Control/UIMenu.h"
