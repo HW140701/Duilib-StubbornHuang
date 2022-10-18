@@ -2168,10 +2168,19 @@ void CListLabelElementUI::DoEvent(TEventUI& event)
         return;
     }
 
-    if( event.Type == UIEVENT_BUTTONDOWN || event.Type == UIEVENT_RBUTTONDOWN )
+    if( event.Type == UIEVENT_BUTTONDOWN)
     {
         if( IsEnabled() ) {
             m_pManager->SendNotify(this, DUI_MSGTYPE_ITEMCLICK);
+            Select();
+            Invalidate();
+        }
+        return;
+    }
+    if (event.Type == UIEVENT_RBUTTONDOWN)
+    {
+        if (IsEnabled()) {
+            m_pManager->SendNotify(this, DUI_MSGTYPE_ITEMRCLICK);
             Select();
             Invalidate();
         }
@@ -2830,10 +2839,19 @@ void CListContainerElementUI::DoEvent(TEventUI& event)
             }
         }
     }
-    if( event.Type == UIEVENT_BUTTONDOWN || event.Type == UIEVENT_RBUTTONDOWN )
+    if( event.Type == UIEVENT_BUTTONDOWN)
     {
         if( IsEnabled() ) {
             m_pManager->SendNotify(this, DUI_MSGTYPE_ITEMCLICK);
+            Select();
+            Invalidate();
+        }
+        return;
+    }
+    if (event.Type == UIEVENT_RBUTTONDOWN)
+    {
+        if (IsEnabled()) {
+            m_pManager->SendNotify(this, DUI_MSGTYPE_ITEMRCLICK);
             Select();
             Invalidate();
         }
